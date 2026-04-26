@@ -1,0 +1,40 @@
+<sdf version='1.9'>
+  <world name='indoor'>
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <gravity>0 0 -9.8</gravity>
+
+    <scene>
+      <ambient>0.8 0.8 0.8 1</ambient>
+      <grid>false</grid>
+      <shadows>1</shadows>
+    </scene>
+
+    <!-- Include Tugbot Depot model from Fuel -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/RichardTops/worlds/tugbot_depot</uri>
+      <name>tugbot_depot</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- Optional: indoor lighting -->
+    <light name='indoor_light' type='point'>
+      <pose>0 0 5 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>10</range>
+        <linear>0.1</linear>
+        <constant>0.5</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+  </world>
+</sdf>
+

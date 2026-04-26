@@ -1,0 +1,10 @@
+<sdf version="1.9">
+  <world name="ionic">
+    <!-- Include the Ionic_World from Gazebo Fuel -->
+<include>
+<uri>
+https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ionic Interior
+</uri>
+</include>
+  </world>
+</sdf>
